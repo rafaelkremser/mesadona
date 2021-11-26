@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@400&family=Outfit:wght@300&family=Poppins:wght@100;200;400&family=Raleway:wght@300&family=Teko:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 10;
+    background: #fff;
+}
+header .home {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    color: #00b90f;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: appear-home 0.5s linear forwards;
+    animation-delay: 0.2s;
+}
+@keyframes appear-home {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+header .navigation {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+header .navigation li {
+    list-style: none;
+    margin: 0 5px;
+}
+header .navigation li a {
+    padding: 10px 20px;
+    color: #00b90f;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.75s;
+    opacity: 0;
+    animation: navigation_appear 0.5s linear forwards;
+    animation-delay: 0.7s;
+}
+@keyframes navigation_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+header .navigation li a:hover {
+    background: #00b90f;
+    color: #fff;
+}
+header .search {
+    position: relative;
+    height: 40px;
+    width: 300px;
+    opacity: 0;
+    animation: search_appear 0.5s linear forwards;
+    animation-delay: 1.2s;
+}
+@keyframes search_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+header .search input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    background: transparent;
+    outline: none;
+    border: 1px solid #00b90f;
+    border-radius: 5px;
+    padding: 0 10px 0 55px;
+}
+header .search ion-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 1.5rem;
+    color: #00b90f;
+    border-right: 1px solid #00b90f;
+    padding-right: 10px;
+}
+.main {
+    height: 100vh;
+    background: #00b90f;
+    padding: 200px 100px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .content {
+    max-width: 700px;
+}
+.main .content .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    color: #fff;
+    opacity: 0;
+    animation: title_appear 0.5s linear forwards;
+    animation-delay: 1s;
+}
+@keyframes title_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.main .content .text {
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+    color: #fff;
+    opacity: 0;
+    animation: text_appear 0.5s linear forwards;
+    animation-delay: 1.5s;
+}
+@keyframes text_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.main .content .button {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 400px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 2rem;
+    padding: 15px 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: 0.75s;
+    opacity: 0;
+    animation: button_appear 0.5s linear forwards;
+    animation-delay: 2s;
+}
+@keyframes button_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.main .content .button:hover {
+    background: #fff;
+    color: #00b90f;
+}
+.main .logo {
+    max-width: 400px;
+    margin-left: 50px;
+}
+@media (max-width: 991px)
+{
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+    .main {
+        height: auto;
+        padding: 150px 20px 50px;
+        flex-direction: column-reverse;
+    }
+    .main .logo {
+        max-width: 400px;
+        margin-left: 0;
+    }
+    .main .content .title {
+        font-size: 4rem;
+    }
+}
+@media (max-width: 600px)
+{
+    header .search {
+        width: 100%;
+    }
+}
