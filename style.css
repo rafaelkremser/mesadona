@@ -187,6 +187,17 @@ header .search ion-icon {
 .main .logo {
     max-width: 400px;
     margin-left: 50px;
+    opacity: 0;
+    animation: logo_appear 0.5s linear forwards;
+    animation-delay: 2.5s;
+}
+@keyframes logo_appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @media (max-width: 991px)
 {
