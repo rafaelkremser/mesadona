@@ -199,6 +199,118 @@ header .search ion-icon {
         opacity: 1;
     }
 }
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #00b90f;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+footer .container .sec {
+    margin-right: 30px;
+}
+footer .container .sec.aboutus {
+    width: 40%;
+}
+footer .container h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container h2:before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #fff; /*#008036*/
+}
+footer p {
+    color: #fff;
+}
+.socials {
+    margin-top: 20px;
+    display: flex;
+}
+.socials li {
+    list-style: none;
+}
+.socials li a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: #01a30e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+.socials li a:hover {
+    background: #00740a; /*rgb(209, 209, 209)*/
+}
+.documents {
+    position: relative;
+    width: 25%;
+}
+.documents ul li {
+    list-style: none;
+}
+.documents ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.documents ul li a:hover {
+    color: rgb(209, 209, 209)
+}
+.contactus {
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contactus .contacts {
+    position: relative;
+}
+.contactus .contacts li {
+    display: flex;
+    margin-bottom: 16px;
+}
+.contactus .contacts li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contactus .contacts li span {
+    color: #fff;
+}
+.contactus .contacts li a {
+    color: #fff;
+    text-decoration: none;
+}
+.copyright {
+    width: 100%;
+    background: #00a30e;
+    padding: 8px 100px;
+    text-align: center;
+    color: #fff;
+}
 @media (max-width: 991px)
 {
     header {
@@ -216,6 +328,21 @@ header .search ion-icon {
     }
     .main .content .title {
         font-size: 4rem;
+    }
+    footer {
+        padding: 40px;
+    }
+    footer .container {
+        flex-direction: column;
+    }
+    footer .container .sec.aboutus,
+    .documents,
+    .contactus {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .copyright {
+        padding: 8px 40px;
     }
 }
 @media (max-width: 600px)
