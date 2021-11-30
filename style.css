@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -17,6 +17,7 @@ header {
     padding: 15px 100px;
     z-index: 10;
     background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 header .home {
     position: relative;
@@ -161,11 +162,10 @@ header .search ion-icon {
     cursor: pointer;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    color: #fff;
+    color: #00b90f;
     font-size: 2rem;
     padding: 15px 20px;
-    background: transparent;
-    border: 2px solid #fff;
+    background: #fff;
     border-radius: 10px;
     transition: 0.75s;
     opacity: 0;
@@ -181,7 +181,7 @@ header .search ion-icon {
     }
 }
 .main .content .button:hover {
-    background: #fff;
+    background: rgb(221, 212, 212);
     color: #00b90f;
 }
 .main .logo {
@@ -198,6 +198,112 @@ header .search ion-icon {
     100% {
         opacity: 1;
     }
+}
+.introduction {
+    height: 100vh;
+    background: #fff;
+    padding: 200px 100px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.introduction .content {
+    margin-left: 150px;
+    max-width: 800px;
+}
+.introduction .content .title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    color: #00b90f;
+}
+.introduction .content .text {
+    max-width: 80%;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    color: #00b90f;
+}
+.introduction .content .button {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 30px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #00b90f;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background: #fff;
+    border: 2px solid #00b90f;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.introduction .content .button:hover {
+    background: #00b90f;
+    color: #fff;
+}
+.introduction .ilustration {
+    max-width: 400px;
+    border-radius: 150px;
+}
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.options .container {
+    position: relative;
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.options .container .card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    background: #00b90f;
+    display: flex;
+    flex-direction: column;
+    /*border-radius: 20px;*/
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+.options .container .card:hover {
+    height: 360px;
+}
+.options .container .card .logobox {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: 1rem;
+    text-align: center;
+    z-index: 1;
+}
+.options .container .card .logobox ion-icon {
+    max-width: 100%;
+    font-size: 9rem;
+    color: #fff;
+}
+.options .container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.options .container .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
 }
 footer {
     position: relative;
@@ -311,6 +417,8 @@ footer p {
     text-align: center;
     color: #fff;
 }
+
+
 @media (max-width: 991px)
 {
     header {
@@ -328,6 +436,19 @@ footer p {
     }
     .main .content .title {
         font-size: 4rem;
+    }
+    .introduction {
+        height: auto;
+        padding: 150px 20px 50px;
+        flex-direction: column;
+    }
+    .introduction .ilustration {
+        max-width: 400px;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+    .introduction .content .title {
+        font-size: 3.5rem;
     }
     footer {
         padding: 40px;
