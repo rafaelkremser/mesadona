@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesadona: Admin Dashboard</title>
+    <link rel="shortcut icon" href="117b14d299caeb63f241df51cad5776a-grafico-de-pizza-verde.png" type="image/gif">
+    <link rel="stylesheet" href="admin.css">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cash"></ion-icon></span>
+                        <span class="title" style="font-family: 'Outfit', sans-serif; font-size: 1.5rem;">Admin Mesadona</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Painel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <span class="title">Clientes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <span class="title">Mensagens</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle-outline"></ion-icon></span>
+                        <span class="title">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="settings"></ion-icon></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="lock"></ion-icon></span>
+                        <span class="title">Senha</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="C:/Users/RafaelFK/Documents/VSCode/Projects/MesadonaSite/index.html">
+                        <span class="icon"><ion-icon name="exit"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Pesquisar...">
+                    <ion-icon name="search"></ion-icon>
+                </label>
+            </div>
+            <div class="user">
+                <img src="Mesadona Monocromático.png">
+            </div>
+        </div>
+
+        <div class="cardbox">
+            <div class="card">
+                <div>
+                    <div class="numbers">1.504</div>
+                    <div class="cardname">Registros</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="clipboard"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">80</div>
+                    <div class="cardname">Horas</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="time"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">284</div>
+                    <div class="cardname">Serviços</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="construct"></ion-icon>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <div class="numbers">R$7.777</div>
+                    <div class="cardname">Lucro</div>
+                </div>
+                <div class="iconbox">
+                    <ion-icon name="swap"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="graphbox">
+            <div class="box">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="box">
+                <canvas id="earning"></canvas>
+            </div>
+        </div>
+
+        <script src="admin.js"></script>
+
+        <div class="details">
+            <div class="recentorders">
+                <div class="cardheader">
+                    <h2>Ordens Recentes</h2>
+                    <a href="#" class="btn">Veja tudo</a>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Nome</td>
+                            <td>Preço</td>
+                            <td>Pagamento</td>
+                            <td>Status</td>
+                        </tr>
+                    <tbody>
+                        <tr>
+                            <td>Geladeira</td>
+                            <td>R$ 1.200</td>
+                            <td>Pago</td>
+                            <td><span class="status entregue">entregue</span></td>
+                        </tr>
+                        <tr>
+                            <td>Smart TV</td>
+                            <td>R$ 1.900</td>
+                            <td>Não pago</td>
+                            <td><span class="status progresso">em progresso</span></td>
+                        </tr>
+                        <tr>
+                            <td>PC Gamer</td>
+                            <td>R$ 5.600</td>
+                            <td>Pago</td>
+                            <td><span class="status pendente">pendente</span></td>
+                        </tr>
+                        <tr>
+                            <td>Micro-ondas</td>
+                            <td>R$ 534</td>
+                            <td>Pago</td>
+                            <td><span class="status entregue">entregue</span></td>
+                        </tr>
+                        <tr>
+                            <td>Celular</td>
+                            <td>R$ 2.310</td>
+                            <td>Pago</td>
+                            <td><span class="status devolvido">devolvido</span></td>
+                        </tr>
+                        <tr>
+                            <td>Notebook</td>
+                            <td>R$ 4.980</td>
+                            <td>Não pago</td>
+                            <td><span class="status pendente">pendente</span></td>
+                        </tr>
+                        <tr>
+                            <td>PlayStation 5</td>
+                            <td>R$ 6.100</td>
+                            <td>Pago</td>
+                            <td><span class="status entregue">entregue</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ar-condicionado</td>
+                            <td>R$ 105</td>
+                            <td>Não pago</td>
+                            <td><span class="status progresso"> em progresso</span></td>
+                        </tr>
+                        <tr>
+                            <td>Blue-Ray</td>
+                            <td>R$ 1.271</td>
+                            <td>Pago</td>
+                            <td><span class="status devolvido">devolvido</span></td>
+                        </tr>
+                        <tr>
+                            <td>Fogão</td>
+                            <td>R$ 390</td>
+                            <td>Pago</td>
+                            <td><span class="status pendente">pendente</span></td>
+                        </tr>
+                    </tbody>
+                    </thead>
+                </table>
+            </div>
+            <div class="recentcustomers">
+                <div class="cardheader">
+                    <h2>Novos Clientes</h2>
+                </div>
+                <table>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://avatarfiles.alphacoders.com/853/85371.jpg"></div></td>
+                        <td><h4>Azusa Nakano<br><span>Front-End</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://i.pinimg.com/736x/d1/1e/d9/d11ed97981a80a6cd8fd906ad2511cf1.jpg"></div></td>
+                        <td><h4>Yui Hirasawa<br><span>Full-Stack</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://64.media.tumblr.com/1c4892841b119e960be3c4bd82241ee4/tumblr_ovmdr4rrqf1wydck6o4_400.jpg"></div></td>
+                        <td><h4>Mio Akiyama<br><span>Back-End</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://i.pinimg.com/564x/fa/ff/65/faff6551f51020de5bf20daa689eb3b4.jpg"></div></td>
+                        <td><h4>Tsugumi Kotobuki<br><span>Back-End</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://i.pinimg.com/736x/c5/99/30/c59930f00e006062ed593cc540f5938f.jpg"></div></td>
+                        <td><h4>Ritsu Tainak<br><span>Front-End</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://64.media.tumblr.com/ca7fd94bd3eee8dbe44482dd932eaa2d/tumblr_oyutfe3mju1vy2tgqo9_400.png"></div></td>
+                        <td><h4>Mashiro Shiina<br><span>Subtitle</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://www.wallpapertip.com/wmimgs/174-1747632_ggo-sinon-wallpaper-sword-art-online-sinon-eye.jpg"></div></td>
+                        <td><h4>Asada Shino<br><span>Full-Stack</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgbox"><img src="https://i.imgur.com/GbZZkLvh.jpg"></div></td>
+                        <td><h4>Reina Izumi<br><span>Front-End</span></h4></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) =>
+        item.addEventListener('mouseover',activeLink));
+
+
+
+    </script>
+</body>
+</html>
