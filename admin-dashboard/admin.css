@@ -170,10 +170,11 @@ body {
 }
 .search label ion-icon {
     position: absolute;
-    top: 1px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 10px;
+    font-size: 1.2rem;
     color: var(--green);
-    font-size: 1.2em;
 }
 .user {
     position: relative;
