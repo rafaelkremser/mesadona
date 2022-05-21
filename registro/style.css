@@ -153,3 +153,36 @@ section {
 .continuebutton button:hover {
     background: #00b90ff1;
 }
+@media screen and (max-width: 1130px) {
+    .formimage {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .inputgroup {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
