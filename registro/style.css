@@ -24,11 +24,33 @@ section {
     justify-content: center;
     align-items: center;
 }
+.msg {
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    animation: hidde 0.5s linear forwards;
+    animation-delay: 4s;
+}
+@keyframes hidde {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
 .container {
+    display: flex;
+    opacity: 0;
     height: 80vh;
     width: 80%;
-    display: flex;
     box-shadow: 5px 5px 10px rgba(0, 0, 00, 0.212);
+    animation: revelation 0.5s linear forwards;
+    animation-delay: 4.5s;
 }
 .formimage {
     width: 50%;
@@ -37,6 +59,14 @@ section {
     align-items: center;
     background: rgb(193, 255, 231);
     padding: 1rem;
+}
+@keyframes revelation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .formimage img {
     width: 31rem;
