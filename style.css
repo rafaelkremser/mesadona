@@ -26,17 +26,6 @@ header .home {
     color: #00b90f;
     text-decoration: none;
     font-weight: 600;
-    opacity: 0;
-    animation: appear-home 0.5s linear forwards;
-    animation-delay: 0.2s;
-}
-@keyframes appear-home {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 header .navigation {
     display: flex;
@@ -55,60 +44,43 @@ header .navigation li a {
     font-weight: 500;
     letter-spacing: 1px;
     transition: 0.75s;
-    opacity: 0;
-    animation: navigation_appear 0.5s linear forwards;
-    animation-delay: 0.7s;
-}
-@keyframes navigation_appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 header .navigation li a:hover {
     background: #00b90f;
     color: #fff;
 }
-header .search {
-    position: relative;
-    height: 40px;
-    width: 300px;
-    opacity: 0;
-    animation: search_appear 0.5s linear forwards;
-    animation-delay: 1.2s;
+header .acess {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
-@keyframes search_appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+header .acess li {
+    list-style: none;
+    margin: 0 5px;
 }
-header .search input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    color: #000;
-    background: transparent;
-    outline: none;
+header .acess li .register {
+    padding: 10px 20px;
     border: 1px solid #00b90f;
     border-radius: 5px;
-    padding: 0 10px 0 55px;
-}
-header .search ion-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
-    font-size: 1.5rem;
     color: #00b90f;
-    border-right: 1px solid #00b90f;
-    padding-right: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+header .acess li .register:hover {
+    background: #00b90f;
+    color: #fff;
+}
+header .acess li .login {
+    padding: 10px 20px;
+    background: #00b90f;
+    border: 1px solid #00b90f;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 .main {
     height: 100vh;
@@ -125,34 +97,12 @@ header .search ion-icon {
     font-family: 'Montserrat', sans-serif;
     font-size: 5rem;
     color: #fff;
-    opacity: 0;
-    animation: title_appear 0.5s linear forwards;
-    animation-delay: 1s;
-}
-@keyframes title_appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 .main .content .text {
     margin-top: 50px;
     font-family: 'Inter', sans-serif;
     font-size: 2em;
     color: #fff;
-    opacity: 0;
-    animation: text_appear 0.5s linear forwards;
-    animation-delay: 1.5s;
-}
-@keyframes text_appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 .main .content .button {
     display: inline-block;
@@ -168,17 +118,6 @@ header .search ion-icon {
     background: #fff;
     border-radius: 10px;
     transition: 0.75s;
-    opacity: 0;
-    animation: button_appear 0.5s linear forwards;
-    animation-delay: 2s;
-}
-@keyframes button_appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 .main .content .button:hover {
     background: rgb(221, 212, 212);
@@ -187,17 +126,6 @@ header .search ion-icon {
 .main .logo {
     max-width: 400px;
     margin-left: 50px;
-    opacity: 0;
-    animation: logo_appear 0.5s linear forwards;
-    animation-delay: 2.5s;
-}
-@keyframes logo_appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 .introduction {
     height: 100vh;
