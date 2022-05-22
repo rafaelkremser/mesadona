@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@400&family=Outfit:wght@300&family=Poppins:wght@100;200;400&family=Raleway:wght@300&family=Teko:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --verde: #00b90f;
+}
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+section {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(24deg, rgba(2,205,0,1) 0%, rgba(37,255,0,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.msg {
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #fff;
+    position: absolute;
+    animation: hidde 0.5s linear forwards;
+    animation-delay: 4s;
+}
+@keyframes hidde {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+.container {
+    display: flex;
+    opacity: 0;
+    height: 80vh;
+    width: 80%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 00, 0.212);
+    animation: revelation 0.5s linear forwards;
+    animation-delay: 4.5s;
+}
+.formimage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(193, 255, 231);
+    padding: 1rem;
+}
+@keyframes revelation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.formimage img {
+    width: 31rem;
+}
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 3rem;
+}
+.formheader {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.loginbutton {
+    display: flex;
+    align-items: center;
+}
+.loginbutton button {
+    border: none;
+    background: var(--verde);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+.loginbutton button:hover {
+    background: #00b90ff1;
+}
+.loginbutton button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+.formheader h1::after {
+    content: '';
+    display: block;
+    height: 0.3rem;
+    width: 5rem;
+    background: linear-gradient(90deg, rgba(2,205,0,1) 0%, rgba(37,255,0,1) 100%);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.inputgroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.inputbox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+.inputbox input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+.inputbox input:hover {
+    background: #eeeeee75;
+}
+.inputbox input:focus-visible {
+    outline: 1px solid var(--verde);
+    background: #eeeeee75;
+}
+.inputbox label,
+.gendertitle h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.42rem;
+    padding: 0 3.5rem;
+}
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+.gender-input input {
+    margin-right: 0.35rem;
+}
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+.continuebutton button {
+    width: 100%;
+    margin-top: 1.5rem;
+    border: none;
+    background: var(--verde);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 500;
+    transition: .2s;
+}
+.continuebutton button:hover {
+    background: #00b90ff1;
+}
+@media screen and (max-width: 1130px) {
+    .formimage {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .inputgroup {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
