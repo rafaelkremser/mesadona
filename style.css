@@ -130,7 +130,7 @@ header .acess li .login {
 .introduction {
     height: 100vh;
     background: #fff;
-    padding: 200px 100px 100px;
+    padding: 200px 50px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -158,11 +158,10 @@ header .acess li .login {
     cursor: pointer;
     text-align: center;
     font-family: 'Inter', sans-serif;
-    color: #00b90f;
+    color: #fff;
     font-size: 1.2rem;
     padding: 15px 30px;
-    background: #fff;
-    border: 2px solid #00b90f;
+    background: #00b90f;
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -172,7 +171,6 @@ header .acess li .login {
 }
 .introduction .ilustration {
     max-width: 400px;
-    border-radius: 150px;
 }
 .options {
     display: flex;
